@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>About Kristi Galligan, PhD — Dissertation Unstuck</title>
+  <meta name="description" content="Meet Kristi Galligan, PhD — dissertation editor, academic coach, and educator with 20+ years of experience helping students finish strong.">
+  <meta name="keywords" content="Kristi Galligan PhD, dissertation coach, academic editor, thesis mentor, educational technology, instructional design, dissertation help">
+  <meta name="author" content="Kristi Galligan, PhD">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.dissertationunstuck.com/about">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.dissertationunstuck.com/about">
+  <meta property="og:title" content="About Kristi Galligan, PhD — Dissertation Unstuck">
+  <meta property="og:description" content="Meet Kristi Galligan, PhD — dissertation editor, academic coach, and educator with 20+ years of experience.">
+  <meta property="og:site_name" content="Dissertation Unstuck">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="About Kristi Galligan, PhD — Dissertation Unstuck">
+  <meta name="twitter:description" content="Meet Kristi Galligan, PhD — dissertation editor, academic coach, and educator with 20+ years of experience.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #FAF9F7;
+      --surface: #FFFFFF;
+      --border: #E8E5DF;
+      --border-light: #F0EDE8;
+      --text: #2E2B27;
+      --text-secondary: #6E6A62;
+      --text-faint: #9E9A91;
+      --dark: #1C1B18;
+      --accent: #3B6B5E;
+      --accent-light: #4A8272;
+      --accent-wash: #3B6B5E0A;
+      --accent-wash-2: #3B6B5E12;
+      --warm-grad-1: #FAF9F7;
+      --warm-grad-2: #F5F0EB;
+      --warm-grad-3: #F0EAE2;
+      --serif: 'Newsreader', 'Georgia', serif;
+      --sans: 'Source Sans 3', 'Helvetica Neue', sans-serif;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+    }
+    ::selection { background: var(--accent); color: #fff; }
+    a { color: inherit; }
+
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 2rem; }
+
+    /* --- NAV --- */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(250, 249, 247, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 2px solid var(--accent);
+      transition: box-shadow 0.3s;
+    }
+    nav.scrolled { box-shadow: 0 2px 16px rgba(0,0,0,0.04); }
+    .nav-inner {
+      max-width: 1080px; margin: 0 auto; padding: 0 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--dark);
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
+    .nav-links a {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-weight: 400;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--dark); }
+    .nav-links a.active { color: var(--dark); font-weight: 600; }
+    .nav-links .nav-cta {
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .nav-links .nav-cta:hover { color: var(--accent-light); }
+
+    .nav-toggle {
+      display: none; background: none; border: none; cursor: pointer;
+      width: 24px; height: 18px; position: relative; z-index: 110;
+    }
+    .nav-toggle span {
+      display: block; width: 100%; height: 1.5px; background: var(--dark);
+      position: absolute; left: 0; transition: all 0.3s;
+    }
+    .nav-toggle span:nth-child(1) { top: 0; }
+    .nav-toggle span:nth-child(2) { top: 8px; }
+    .nav-toggle span:nth-child(3) { top: 16px; }
+    .nav-toggle.active span:nth-child(1) { top: 8px; transform: rotate(45deg); }
+    .nav-toggle.active span:nth-child(2) { opacity: 0; }
+    .nav-toggle.active span:nth-child(3) { top: 8px; transform: rotate(-45deg); }
+
+    /* --- PAGE HEADER --- */
+    .page-header {
+      padding: 8.5rem 0 3.5rem;
+      background: linear-gradient(180deg, var(--warm-grad-1) 0%, var(--warm-grad-2) 100%);
+    }
+    .page-header-inner {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 3.5rem;
+      align-items: end;
+    }
+    .page-header-photo {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      border-radius: 10px;
+      overflow: hidden;
+      background: linear-gradient(145deg, var(--warm-grad-2), var(--warm-grad-3));
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .page-header-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .photo-placeholder {
+      text-align: center;
+      color: var(--text-faint);
+    }
+    .photo-placeholder svg {
+      width: 48px;
+      height: 48px;
+      color: var(--accent);
+      opacity: 0.25;
+      margin-bottom: 0.75rem;
+    }
+    .photo-placeholder span {
+      display: block;
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+    .page-header-text {
+      padding-bottom: 0.5rem;
+    }
+    .page-header-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.25rem;
+    }
+    .page-header h1 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--dark);
+      letter-spacing: -0.025em;
+      margin-bottom: 1.25rem;
+    }
+    .page-header-lead {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      font-weight: 300;
+      max-width: 560px;
+    }
+
+    /* --- ABOUT BODY --- */
+    .about-body {
+      padding: 4.5rem 0;
+    }
+    .about-body-inner {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 4rem;
+      align-items: start;
+    }
+    .about-prose {
+      font-size: 1.02rem;
+      color: var(--text);
+      line-height: 1.85;
+      font-weight: 300;
+    }
+    .about-prose p + p {
+      margin-top: 1.5rem;
+    }
+
+    /* --- ASIDE DETAILS --- */
+    .about-sidebar {
+      padding-top: 0.25rem;
+    }
+    .about-detail {
+      padding: 1.35rem 0;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .about-detail:first-child { padding-top: 0; }
+    .about-detail:last-child { border-bottom: none; }
+    .about-detail-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 0.35rem;
+      font-weight: 600;
+    }
+    .about-detail-value {
+      font-family: var(--serif);
+      font-size: 1.02rem;
+      color: var(--dark);
+      line-height: 1.5;
+    }
+
+    /* --- CTA BAND --- */
+    .cta-band {
+      padding: 5rem 0;
+      background: linear-gradient(180deg, var(--warm-grad-2) 0%, var(--warm-grad-3) 100%);
+    }
+    .cta-inner {
+      text-align: center;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+    .cta-inner h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 400;
+      color: var(--dark);
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+    .cta-inner p {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      font-weight: 300;
+      margin-bottom: 2rem;
+    }
+    .btn-fill {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-family: var(--sans);
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #fff;
+      background: var(--accent);
+      padding: 0.8rem 1.75rem;
+      border-radius: 6px;
+      border: none;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    }
+    .btn-fill:hover {
+      background: var(--accent-light);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 16px rgba(59, 107, 94, 0.2);
+    }
+
+    /* --- FOOTER --- */
+    footer {
+      padding: 2.5rem 0;
+      border-top: 1px solid var(--border);
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-copy { font-size: 0.78rem; color: var(--text-faint); }
+    .footer-links { display: flex; gap: 1.5rem; }
+    .footer-links a {
+      font-size: 0.78rem;
+      color: var(--text-faint);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--accent); }
+
+    /* --- REVEAL --- */
+    .reveal {
+      opacity: 0; transform: translateY(16px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 900px) {
+      .page-header-inner {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .page-header-photo { max-width: 240px; }
+      .about-body-inner {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+    }
+    @media (max-width: 640px) {
+      .page-header { padding: 7rem 0 2.5rem; }
+      .page-header h1 { font-size: 1.85rem; }
+      .page-header-photo { max-width: 200px; }
+      .about-body { padding: 3rem 0; }
+      .cta-band { padding: 3.5rem 0; }
+      .nav-links { display: none; }
+      .nav-links.open {
+        display: flex; flex-direction: column;
+        position: fixed; inset: 0;
+        background: var(--bg);
+        justify-content: center; align-items: center;
+        gap: 1.75rem; z-index: 105;
+      }
+      .nav-links.open a { font-size: 1.05rem; color: var(--dark); }
+      .nav-toggle { display: block; }
+      .footer-inner { flex-direction: column; gap: 1rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Dissertation Unstuck</a>
+      <div class="nav-links" id="navLinks">
+        <a href="services.html">Services</a>
+        <a href="about.html" class="active">About</a>
+        <a href="index.html#process">How It Works</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="contact.html" class="nav-cta">Get in Touch</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="wrap">
+      <div class="page-header-inner reveal">
+        <div class="page-header-photo">
+          <!-- Replace with: <img src="your-photo.jpg" alt="Kristi Galligan, PhD"> -->
+          <div class="photo-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span>Photo of Kristi</span>
+          </div>
+        </div>
+        <div class="page-header-text">
+          <div class="page-header-label">About</div>
+          <h1>About Kristi</h1>
+          <p class="page-header-lead">Dissertation editor, academic coach, and educator with more than twenty years of experience helping students write with clarity and confidence.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT BODY -->
+  <section class="about-body">
+    <div class="wrap">
+      <div class="about-body-inner">
+        <div class="about-prose reveal">
+          <p>I've been through the dissertation process myself, and I know how isolating the final stretch can feel — when feedback piles up, motivation slows, and the finish line seems to keep moving. Many students reach this stage feeling overwhelmed or unsure how to move forward. My role is to help you regain clarity and momentum.</p>
+          <p>I hold a PhD in Educational Technology and Instructional Design along with two master's degrees, and I've spent more than twenty years teaching English and writing at levels ranging from middle school through college. Throughout my career, I've guided students through complex writing projects, thesis development, and academic revision — work that requires both strong writing skills and thoughtful mentorship.</p>
+          <p>My approach is practical, supportive, and low-pressure. We start by understanding where you are in the process, identify what's creating friction, and create a clear path forward so you can continue progressing with confidence.</p>
+          <p>Students often come to Dissertation Unstuck when they feel stuck between drafts, uncertain how to respond to committee feedback, or preparing for an important milestone like proposal or defense. Together, we focus on clarity, structure, and steady progress — without judgment or overwhelm.</p>
+        </div>
+        <aside class="about-sidebar reveal" aria-label="Credentials and background">
+          <div class="about-detail">
+            <div class="about-detail-label">Education</div>
+            <div class="about-detail-value">PhD, Educational Technology &amp; Instructional Design</div>
+          </div>
+          <div class="about-detail">
+            <div class="about-detail-label">Degrees</div>
+            <div class="about-detail-value">Three — including master's from Belmont University</div>
+          </div>
+          <div class="about-detail">
+            <div class="about-detail-label">Teaching</div>
+            <div class="about-detail-value">Award-winning educator, 20+ years across middle school, high school, and college</div>
+          </div>
+          <div class="about-detail">
+            <div class="about-detail-label">Based in</div>
+            <div class="about-detail-value">Lebanon, Tennessee — working with students nationwide</div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <div class="cta-band">
+    <div class="wrap">
+      <div class="cta-inner reveal">
+        <h2>Ready to move forward?</h2>
+        <p>Reach out with your project details and let's figure out the best way to support your work.</p>
+        <a href="contact.html" class="btn-fill">Get in Touch</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-inner">
+        <div class="footer-copy">&copy; 2026 Dissertation Unstuck</div>
+        <div class="footer-links">
+          <a href="services.html">Services</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20));
+
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      navToggle.classList.remove('active');
+      navLinks.classList.remove('open');
+    }));
+
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>

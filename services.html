@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Services — Dissertation Unstuck | Editing, Formatting & Coaching</title>
+  <meta name="description" content="Dissertation and thesis editing, APA/MLA formatting, and mentoring services from Kristi Galligan, PhD. Three ways to work together depending on where you are in the process.">
+  <meta name="keywords" content="dissertation editing services, thesis editing, APA formatting, MLA formatting, dissertation coach, defense preparation, academic mentoring, committee feedback help">
+  <meta name="author" content="Kristi Galligan, PhD">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.dissertationunstuck.com/services">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.dissertationunstuck.com/services">
+  <meta property="og:title" content="Services — Dissertation Unstuck">
+  <meta property="og:description" content="Dissertation and thesis editing, APA/MLA formatting, and mentoring services from Kristi Galligan, PhD.">
+  <meta property="og:site_name" content="Dissertation Unstuck">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Services — Dissertation Unstuck">
+  <meta name="twitter:description" content="Dissertation and thesis editing, APA/MLA formatting, and mentoring services from Kristi Galligan, PhD.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #FAF9F7;
+      --surface: #FFFFFF;
+      --border: #E8E5DF;
+      --border-light: #F0EDE8;
+      --text: #2E2B27;
+      --text-secondary: #6E6A62;
+      --text-faint: #9E9A91;
+      --dark: #1C1B18;
+      --accent: #3B6B5E;
+      --accent-light: #4A8272;
+      --accent-wash: #3B6B5E0A;
+      --accent-wash-2: #3B6B5E12;
+      --warm-grad-1: #FAF9F7;
+      --warm-grad-2: #F5F0EB;
+      --warm-grad-3: #F0EAE2;
+      --serif: 'Newsreader', 'Georgia', serif;
+      --sans: 'Source Sans 3', 'Helvetica Neue', sans-serif;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+    }
+    ::selection { background: var(--accent); color: #fff; }
+    a { color: inherit; }
+
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 2rem; }
+
+    /* --- NAV --- */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(250, 249, 247, 0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 2px solid var(--accent);
+      transition: box-shadow 0.3s;
+    }
+    nav.scrolled { box-shadow: 0 2px 16px rgba(0,0,0,0.04); }
+    .nav-inner {
+      max-width: 1080px; margin: 0 auto; padding: 0 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--dark);
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
+    .nav-links a {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-weight: 400;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--dark); }
+    .nav-links a.active { color: var(--dark); font-weight: 600; }
+    .nav-links .nav-cta {
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .nav-links .nav-cta:hover { color: var(--accent-light); }
+
+    .nav-toggle {
+      display: none; background: none; border: none; cursor: pointer;
+      width: 24px; height: 18px; position: relative; z-index: 110;
+    }
+    .nav-toggle span {
+      display: block; width: 100%; height: 1.5px; background: var(--dark);
+      position: absolute; left: 0; transition: all 0.3s;
+    }
+    .nav-toggle span:nth-child(1) { top: 0; }
+    .nav-toggle span:nth-child(2) { top: 8px; }
+    .nav-toggle span:nth-child(3) { top: 16px; }
+    .nav-toggle.active span:nth-child(1) { top: 8px; transform: rotate(45deg); }
+    .nav-toggle.active span:nth-child(2) { opacity: 0; }
+    .nav-toggle.active span:nth-child(3) { top: 8px; transform: rotate(-45deg); }
+
+    /* --- PAGE HEADER --- */
+    .page-header {
+      padding: 8.5rem 0 3.5rem;
+      background: linear-gradient(180deg, var(--warm-grad-1) 0%, var(--warm-grad-2) 100%);
+    }
+    .page-header-inner {
+      max-width: 620px;
+    }
+    .page-header-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.25rem;
+    }
+    .page-header h1 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--dark);
+      letter-spacing: -0.025em;
+      margin-bottom: 1.25rem;
+    }
+    .page-header p {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      font-weight: 300;
+    }
+
+    /* --- SERVICE SECTIONS --- */
+    .service-section {
+      padding: 4.5rem 0;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .service-section:last-child { border-bottom: none; }
+    .service-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .service-header {}
+    .service-icon-lg {
+      width: 52px; height: 52px;
+      background: var(--accent-wash-2);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    .service-icon-lg svg { width: 24px; height: 24px; color: var(--accent); stroke: var(--accent); }
+    .service-header h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 2.5vw, 1.85rem);
+      font-weight: 400;
+      color: var(--dark);
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+      margin-bottom: 1rem;
+    }
+    .service-header p {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      font-weight: 300;
+    }
+    .service-features {
+      padding-top: 0.25rem;
+    }
+    .service-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.1rem 0;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .service-feature:first-child { padding-top: 0; }
+    .service-feature:last-child { border-bottom: none; }
+    .feature-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      opacity: 0.3;
+      flex-shrink: 0;
+      margin-top: 0.55rem;
+    }
+    .service-feature span {
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.6;
+      font-weight: 400;
+    }
+
+    /* --- CTA BAND --- */
+    .cta-band {
+      padding: 5rem 0;
+      background: linear-gradient(180deg, var(--warm-grad-2) 0%, var(--warm-grad-3) 100%);
+    }
+    .cta-inner {
+      text-align: center;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+    .cta-inner h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 400;
+      color: var(--dark);
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+    .cta-inner p {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      font-weight: 300;
+      margin-bottom: 2rem;
+    }
+    .btn-fill {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-family: var(--sans);
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #fff;
+      background: var(--accent);
+      padding: 0.8rem 1.75rem;
+      border-radius: 6px;
+      border: none;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    }
+    .btn-fill:hover {
+      background: var(--accent-light);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 16px rgba(59, 107, 94, 0.2);
+    }
+
+    /* --- FOOTER --- */
+    footer {
+      padding: 2.5rem 0;
+      border-top: 1px solid var(--border);
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-copy { font-size: 0.78rem; color: var(--text-faint); }
+    .footer-links { display: flex; gap: 1.5rem; }
+    .footer-links a {
+      font-size: 0.78rem;
+      color: var(--text-faint);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--accent); }
+
+    /* --- REVEAL --- */
+    .reveal {
+      opacity: 0; transform: translateY(16px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 900px) {
+      .service-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+    @media (max-width: 640px) {
+      .page-header { padding: 7rem 0 2.5rem; }
+      .page-header h1 { font-size: 1.85rem; }
+      .service-section { padding: 3rem 0; }
+      .cta-band { padding: 3.5rem 0; }
+      .nav-links { display: none; }
+      .nav-links.open {
+        display: flex; flex-direction: column;
+        position: fixed; inset: 0;
+        background: var(--bg);
+        justify-content: center; align-items: center;
+        gap: 1.75rem; z-index: 105;
+      }
+      .nav-links.open a { font-size: 1.05rem; color: var(--dark); }
+      .nav-toggle { display: block; }
+      .footer-inner { flex-direction: column; gap: 1rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Dissertation Unstuck</a>
+      <div class="nav-links" id="navLinks">
+        <a href="services.html" class="active">Services</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#process">How It Works</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="contact.html" class="nav-cta">Get in Touch</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="wrap">
+      <div class="page-header-inner reveal">
+        <div class="page-header-label">Services</div>
+        <h1>Three Ways to Work Together</h1>
+        <p>Every student reaches a different point in the dissertation process. These services can stand alone or be combined depending on the kind of support you need.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- EDITING -->
+  <section class="service-section">
+    <div class="wrap">
+      <div class="service-layout">
+        <div class="service-header reveal">
+          <div class="service-icon-lg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <h2>Dissertation &amp; Thesis Editing</h2>
+          <p>For students who have written most of their dissertation or thesis but want expert guidance to strengthen clarity, structure, and academic flow before submission.</p>
+        </div>
+        <div class="service-features reveal">
+          <div class="service-feature">
+            <div class="feature-dot"></div>
+            <span>Full draft or chapter-by-chapter editing</span>
+          </div>
+          <div class="service-feature">
+            <div class="feature-dot"></div>
+            <span>Argument clarity and flow refinement</span>
+          </div>
+          <div class="service-feature">
+            <div class="feature-dot"></div>
+            <span>Pre-committee submission review</span>
+          </div>
+          <div class="service-feature">
+            <div class="feature-dot"></div>
+            <span>Feedback designed to strengthen your voice — not replace it</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REFERENCES & FORMATTING -->
+  <div class="warm-band" style="background: linear-gradient(180deg, var(--warm-grad-1) 0%, var(--warm-grad-2) 50%, var(--warm-grad-3) 100%);">
+    <section class="service-section" style="border-bottom: none;">
+      <div class="wrap">
+        <div class="service-layout">
+          <div class="service-header reveal">
+            <div class="service-icon-lg">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+            <h2>References &amp; Formatting</h2>
+            <p>For students who want confidence that citations, formatting, and references meet academic standards before submission.</p>
+          </div>
+          <div class="service-features reveal">
+            <div class="service-feature">
+              <div class="feature-dot"></div>
+              <span>APA and MLA formatting review</span>
+            </div>
+            <div class="service-feature">
+              <div class="feature-dot"></div>
+              <span>Citation and reference cleanup</span>
+            </div>
+            <div class="service-feature">
+              <div class="feature-dot"></div>
+              <span>Identification of missing or inconsistent citations</span>
+            </div>
+            <div class="service-feature">
+              <div class="feature-dot"></div>
+              <span>Document consistency check</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- MENTORING & DEFENSE PREP -->
+  <section class="service-section" style="border-bottom: none;">
+    <div class="wrap">
+      <div class="service-layout">
+        <div class="service-header reveal">
+          <div class="service-icon-lg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h2>Mentoring &amp; Defense Preparation</h2>
+          <p>For students who feel stuck, overwhelmed by revisions, or unsure how to respond to committee feedback.</p>
+        </div>
+        <div class="service-features reveal">
+          <div class="service-feature">
+            <div class="feature-dot"></div>
+            <span>Defense preparation support</span>
+          </div>
+          <div class="service-feature">
+            <div class="feature-dot"></div>
+            <span>Guidance interpreting committee feedback</span>
+          </div>
+          <div class="service-feature">
+            <div class="feature-dot"></div>
+            <span>Revision planning and prioritization</span>
+          </div>
+          <div class="service-feature">
+            <div class="feature-dot"></div>
+            <span>Accountability and structured progress</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <div class="cta-band">
+    <div class="wrap">
+      <div class="cta-inner reveal">
+        <h2>Not sure which service fits?</h2>
+        <p>Reach out with your project details and Kristi will help you figure out the right approach — no commitment required.</p>
+        <a href="contact.html" class="btn-fill">Book a Consultation</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-inner">
+        <div class="footer-copy">&copy; 2026 Dissertation Unstuck</div>
+        <div class="footer-links">
+          <a href="services.html">Services</a>
+          <a href="index.html#about">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20));
+
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      navToggle.classList.remove('active');
+      navLinks.classList.remove('open');
+    }));
+
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
+</body>
+</html>
