@@ -52,7 +52,8 @@
       { "@type": "Question", "name": "Can you help me prepare for my defense?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Mentoring includes structured defense preparation, committee feedback guidance, and accountability through revisions." }},
       { "@type": "Question", "name": "Do you work with both master's and doctoral students?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, across a wide range of disciplines and programs." }},
       { "@type": "Question", "name": "How does the process work?", "acceptedAnswer": { "@type": "Answer", "text": "Submit an inquiry, Kristi reviews it personally, and you discuss scope, timeline, and pricing before anything begins." }},
-      { "@type": "Question", "name": "What formatting styles do you support?", "acceptedAnswer": { "@type": "Answer", "text": "APA and MLA, including citations, reference lists, headings, and document consistency." }}
+      { "@type": "Question", "name": "What formatting styles do you support?", "acceptedAnswer": { "@type": "Answer", "text": "APA and MLA, including citations, reference lists, headings, and document consistency." }},
+      { "@type": "Question", "name": "Do you use any generative AI with your services?", "acceptedAnswer": { "@type": "Answer", "text": "No. All my editing and suggestions are mine. Your work will never be uploaded into any AI platform by Dissertation Unstuck." }}
     ]
   }
   </script>
@@ -111,6 +112,13 @@
       transition: box-shadow 0.3s;
     }
     nav.scrolled { box-shadow: 0 2px 16px rgba(0,0,0,0.04); }
+    nav.menu-open {
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      background: transparent;
+      border-bottom: none;
+      box-shadow: none;
+    }
     .nav-inner {
       max-width: 1080px; margin: 0 auto; padding: 0 2rem;
       display: flex; align-items: center; justify-content: space-between;
@@ -695,7 +703,7 @@
       <div class="wrap">
         <div class="section-head reveal">
           <h2>Three ways to work together</h2>
-          <p>Each service can stand alone or combine depending on where you are in the process.</p>
+          <p>Each service can stand alone or be combined depending on where you are in the process.</p>
         </div>
         <div class="services-grid reveal">
           <article class="service-card">
@@ -759,7 +767,7 @@
         <aside class="about-aside reveal">
           <div class="about-detail">
             <div class="about-detail-label">Degrees</div>
-            <div class="about-detail-value">PhD in Educational Technology and Instructional Design and two separate Master's Degrees.</div>
+            <div class="about-detail-value">PhD in Educational Technology and Instructional Design, English Master&#39;s degree, and Organizational Leadership Master&#39;s degree.</div>
           </div>
           <div class="about-detail">
             <div class="about-detail-label">Teaching</div>
@@ -791,7 +799,7 @@
           <div class="process-step">
             <div class="step-num">2</div>
             <h4>Talk it through</h4>
-            <p>Kristi reviews every request personally and follows up to discuss scope, services, and pricing.</p>
+            <p>I review every request personally and follow up to discuss scope, services, and pricing.</p>
           </div>
           <div class="process-step">
             <div class="step-num">3</div>
@@ -839,6 +847,10 @@
           <button class="faq-q" aria-expanded="false">Is this all remote? <span class="faq-toggle">+</span></button>
           <div class="faq-a"><div class="faq-a-inner">Yes. Kristi works with students across the US via email, phone, and video. Location is never a barrier.</div></div>
         </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Do you use any generative AI with your services? <span class="faq-toggle">+</span></button>
+          <div class="faq-a"><div class="faq-a-inner">No. All my editing and suggestions are mine. Your work will never be uploaded into any AI platform by Dissertation Unstuck.</div></div>
+        </div>
       </div>
     </div>
   </section>
@@ -852,7 +864,7 @@
         </div>
         <div class="contact-grid reveal">
           <div class="contact-text">
-            <p>Send a message with a brief description of your project. What you're working on, your page count, and when you need it done. Kristi reviews all inquiries personally and will follow up to discuss scope, services, and pricing before anything begins.</p>
+            <p>Send a message with a brief description of your project. What you're working on, your page count, and when you need it done. I review all inquiries personally and will follow up to discuss scope, services, and pricing before anything begins.</p>
           </div>
           <a href="contact.html" class="btn-fill">Book a Consultation</a>
         </div>
@@ -882,10 +894,12 @@
     navToggle.addEventListener('click', () => {
       navToggle.classList.toggle('active');
       navLinks.classList.toggle('open');
+      navbar.classList.toggle('menu-open');
     });
     navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
       navToggle.classList.remove('active');
       navLinks.classList.remove('open');
+      navbar.classList.remove('menu-open');
     }));
 
     document.querySelectorAll('.faq-q').forEach(btn => {

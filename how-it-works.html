@@ -75,6 +75,13 @@
       transition: box-shadow 0.3s;
     }
     nav.scrolled { box-shadow: 0 2px 16px rgba(0,0,0,0.04); }
+    nav.menu-open {
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      background: transparent;
+      border-bottom: none;
+      box-shadow: none;
+    }
     .nav-inner {
       max-width: 1080px; margin: 0 auto; padding: 0 2rem;
       display: flex; align-items: center; justify-content: space-between;
@@ -385,8 +392,7 @@
         </div>
         <div class="step-content">
           <h2>Talk It Through</h2>
-          <p>Kristi personally reviews every inquiry and meets with you to understand your goals, challenges, and timeline. Together, you'll discuss the type of support that would be most helpful and review scope and pricing clearly.</p>
-          <div class="step-aside">No pressure. Just clarity.</div>
+          <p>I personally review every inquiry and meet with you to understand your goals, challenges, and timeline. Together, we'll discuss the type of support that would be most helpful and review scope and pricing clearly.</p>
         </div>
       </div>
 
@@ -439,10 +445,12 @@
     navToggle.addEventListener('click', () => {
       navToggle.classList.toggle('active');
       navLinks.classList.toggle('open');
+      navbar.classList.toggle('menu-open');
     });
     navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
       navToggle.classList.remove('active');
       navLinks.classList.remove('open');
+      navbar.classList.remove('menu-open');
     }));
 
     const obs = new IntersectionObserver(entries => {

@@ -95,6 +95,13 @@
       transition: box-shadow 0.3s;
     }
     nav.scrolled { box-shadow: 0 2px 16px rgba(0,0,0,0.04); }
+    nav.menu-open {
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      background: transparent;
+      border-bottom: none;
+      box-shadow: none;
+    }
     .nav-inner {
       max-width: 1080px; margin: 0 auto; padding: 0 2rem;
       display: flex; align-items: center; justify-content: space-between;
@@ -514,10 +521,12 @@
     navToggle.addEventListener('click', () => {
       navToggle.classList.toggle('active');
       navLinks.classList.toggle('open');
+      navbar.classList.toggle('menu-open');
     });
     navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
       navToggle.classList.remove('active');
       navLinks.classList.remove('open');
+      navbar.classList.remove('menu-open');
     }));
 
     document.querySelectorAll('.faq-q').forEach(btn => {
