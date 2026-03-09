@@ -4,22 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Book a Consultation | Dissertation Unstuck | Get Started Today</title>
-  <meta name="description" content="Book a consultation with Kristi Galligan, PhD. Share where you are in your dissertation or thesis process and get personalized guidance on next steps.">
-  <meta name="keywords" content="book dissertation consultation, dissertation help contact, thesis editing consultation, academic coaching inquiry, dissertation support contact">
+  <title>Pricing | Dissertation Unstuck | Editing, Formatting &amp; Coaching</title>
+  <meta name="description" content="Transparent pricing for dissertation and thesis editing, formatting, references, mentoring, and defense preparation services from Dissertation Unstuck.">
+  <meta name="keywords" content="dissertation editing pricing, thesis editing cost, APA formatting price, dissertation coaching rates, defense prep pricing">
   <meta name="author" content="Kristi Galligan, PhD">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.dissertationunstuck.com/contact">
+  <link rel="canonical" href="https://www.dissertationunstuck.com/pricing">
 
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.dissertationunstuck.com/contact">
-  <meta property="og:title" content="Book a Consultation | Dissertation Unstuck">
-  <meta property="og:description" content="Share where you are in your dissertation or thesis process and get personalized guidance on next steps.">
+  <meta property="og:url" content="https://www.dissertationunstuck.com/pricing">
+  <meta property="og:title" content="Pricing | Dissertation Unstuck">
+  <meta property="og:description" content="Transparent pricing for dissertation and thesis editing, formatting, references, mentoring, and defense preparation services.">
   <meta property="og:site_name" content="Dissertation Unstuck">
   <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Book a Consultation | Dissertation Unstuck">
-  <meta name="twitter:description" content="Share where you are in your dissertation or thesis process and get personalized guidance on next steps.">
+  <meta name="twitter:title" content="Pricing | Dissertation Unstuck">
+  <meta name="twitter:description" content="Transparent pricing for dissertation and thesis editing, formatting, references, mentoring, and defense preparation services.">
 
   <link rel="icon" type="image/png" href="favicon.png">
   <meta property="og:image" content="https://www.dissertationunstuck.com/og-image.png">
@@ -170,18 +170,15 @@
       font-weight: 300;
     }
 
-    /* --- CONTACT BODY --- */
-    .contact-body {
+    /* --- PRICING BODY --- */
+    .pricing-body {
       padding: 4.5rem 0 5rem;
     }
-    .contact-layout {
-      display: grid;
-      grid-template-columns: 1fr 380px;
-      gap: 5rem;
-      align-items: start;
+    .pricing-layout {
+      max-width: 720px;
     }
 
-    /* --- LEFT: SERVICE ACCORDIONS --- */
+    /* --- ACCORDIONS --- */
     .service-accordions {
       display: flex;
       flex-direction: column;
@@ -327,64 +324,27 @@
       color: var(--dark);
     }
 
-    /* --- RIGHT: CONTACT CARD --- */
-    .contact-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 2.5rem 2rem;
-      position: sticky;
-      top: 6rem;
+    /* --- CTA BAND --- */
+    .cta-band {
+      padding: 5rem 0;
+      text-align: center;
+      background: linear-gradient(180deg, var(--warm-grad-2) 0%, var(--warm-grad-3) 100%);
     }
-    .contact-card-label {
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 1.75rem;
-    }
-    .contact-method {
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      padding: 1.15rem 1.25rem;
-      background: var(--bg);
-      border: 1px solid var(--border-light);
-      border-radius: 10px;
-      transition: border-color 0.2s, box-shadow 0.2s;
+    .cta-band h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      color: var(--dark);
       margin-bottom: 1rem;
     }
-    .contact-method:last-of-type { margin-bottom: 0; }
-    .contact-method:hover {
-      border-color: var(--accent);
-      box-shadow: 0 2px 12px rgba(43, 76, 126, 0.06);
-    }
-    .contact-method-icon {
-      width: 40px; height: 40px;
-      background: var(--accent-wash-2);
-      border-radius: 8px;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-    }
-    .contact-method-icon svg { width: 18px; height: 18px; color: var(--accent); stroke: var(--accent); }
-    .contact-method-label {
-      font-size: 0.72rem;
-      color: var(--text-faint);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-weight: 500;
-    }
-    .contact-method-value {
-      font-size: 0.95rem;
-      color: var(--dark);
-      font-weight: 400;
-    }
-    .contact-card-divider {
-      height: 1px;
-      background: var(--border-light);
-      margin: 1.75rem 0;
+    .cta-band p {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      font-weight: 300;
+      line-height: 1.75;
+      max-width: 480px;
+      margin: 0 auto 2rem;
     }
     .btn-fill {
       display: inline-flex; align-items: center; gap: 0.4rem;
@@ -399,8 +359,6 @@
       text-decoration: none;
       cursor: pointer;
       transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-      width: 100%;
-      justify-content: center;
     }
     .btn-fill:hover {
       background: var(--accent-light);
@@ -408,53 +366,6 @@
       box-shadow: 0 4px 16px rgba(43, 76, 126, 0.2);
     }
     .btn-fill svg { width: 16px; height: 16px; }
-
-    /* --- FORM --- */
-    .form-group {
-      margin-bottom: 1.25rem;
-    }
-    .form-group label {
-      display: block;
-      font-size: 0.82rem;
-      font-weight: 500;
-      color: var(--dark);
-      margin-bottom: 0.4rem;
-    }
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      font-family: var(--sans);
-      font-size: 0.92rem;
-      font-weight: 400;
-      color: var(--text);
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 0.7rem 0.9rem;
-      transition: border-color 0.2s, box-shadow 0.2s;
-      outline: none;
-    }
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(43, 76, 126, 0.08);
-    }
-    .form-group textarea {
-      resize: vertical;
-      min-height: 120px;
-      line-height: 1.65;
-    }
-    .form-group select {
-      appearance: none;
-      -webkit-appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236E6A62' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 0.9rem center;
-      padding-right: 2.5rem;
-      cursor: pointer;
-    }
 
     /* --- FOOTER --- */
     footer {
@@ -484,33 +395,17 @@
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
     /* --- RESPONSIVE --- */
-    @media (max-width: 900px) {
-      .contact-layout {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-      }
-      .contact-card {
-        position: static;
-        max-width: 100%;
-      }
-    }
     @media (max-width: 640px) {
       .page-header { padding: 7rem 0 2.5rem; }
       .page-header h1 { font-size: 1.85rem; }
-      .contact-body { padding: 3rem 0 3.5rem; }
-      .contact-card { padding: 1.75rem 1.25rem; }
+      .pricing-body { padding: 3rem 0 3.5rem; }
       .service-accordion-btn { padding: 1.1rem 1.15rem; gap: 1rem; }
       .service-accordion-inner { padding: 0 1.15rem 1.25rem; }
       .service-accordion-title { font-size: 1.05rem; }
       .pricing-card { padding: 1rem; }
       .pricing-card-title { font-size: 0.92rem; }
       .pricing-card-meta { gap: 1rem; flex-wrap: wrap; }
-      .form-group input,
-      .form-group select,
-      .form-group textarea {
-        font-size: 16px;
-        padding: 0.8rem 1rem;
-      }
+      .cta-band { padding: 3.5rem 0; }
       .nav-links { display: none; }
       .nav-links.open {
         display: flex; flex-direction: column;
@@ -542,10 +437,10 @@
       <div class="nav-links" id="navLinks">
         <a href="services.html">How I Help?</a>
         <a href="how-it-works.html">How It Works</a>
-        <a href="pricing.html">Pricing</a>
+        <a href="pricing.html" class="active">Pricing</a>
         <a href="about.html">About</a>
         <a href="faq.html">FAQ</a>
-        <a href="contact.html" class="nav-cta active">Book a Consultation</a>
+        <a href="contact.html" class="nav-cta">Book a Consultation</a>
       </div>
       <button class="nav-toggle" id="navToggle" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -557,21 +452,18 @@
   <header class="page-header">
     <div class="wrap">
       <div class="page-header-inner reveal">
-        <div class="page-header-label">Book a Consultation</div>
-        <h1>Book a Consultation</h1>
-        <p>Taking the first step doesn't require everything to be figured out.</p>
+        <div class="page-header-label">Pricing</div>
+        <h1>Transparent pricing, no surprises</h1>
+        <p>Every project is scoped individually. Below are starting prices for each service to help you plan ahead.</p>
       </div>
     </div>
   </header>
 
-  <!-- CONTACT BODY -->
-  <section class="contact-body">
+  <!-- PRICING BODY -->
+  <section class="pricing-body">
     <div class="wrap">
-      <div class="contact-layout">
-
-        <!-- LEFT -->
+      <div class="pricing-layout">
         <div class="service-accordions reveal">
-          <div class="page-header-label" style="margin-bottom: 1rem;">Pricing</div>
           <div class="service-accordion">
             <button class="service-accordion-btn" aria-expanded="false">
               <span class="service-accordion-title">Dissertation &amp; Thesis Editing</span>
@@ -748,75 +640,16 @@
             </div>
           </div>
         </div>
-
-        <!-- RIGHT -->
-        <div class="contact-card reveal">
-          <div class="contact-card-label">Book a Consultation</div>
-
-          <form action="https://formsubmit.co/Dissertationunstuck@gmail.com" method="POST">
-            <input type="hidden" name="_subject" value="New Consultation Request - Dissertation Unstuck">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://www.dissertationunstuck.com/contact.html">
-
-            <div class="form-group">
-              <label for="name">Name (First and Last)</label>
-              <input type="text" id="name" name="name" required placeholder="Your full name">
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required placeholder="Your email address">
-            </div>
-
-            <div class="form-group">
-              <label for="degree">Degree Level</label>
-              <select id="degree" name="degree" required>
-                <option value="" disabled selected>Select your degree level</option>
-                <option value="Master Program">Master Program</option>
-                <option value="Doctoral Program">Doctoral Program</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="support">Types of Support Needed</label>
-              <select id="support" name="support" required>
-                <option value="" disabled selected>Select type of support</option>
-                <option value="Formatting & APA Final Polish">Formatting & APA Final Polish</option>
-                <option value="References & Citations Verification">References & Citations Verification</option>
-                <option value="Full Dissertation and Thesis Coaching Edit">Full Dissertation and Thesis Coaching Edit</option>
-                <option value="Chapter Rescue Edit">Chapter Rescue Edit</option>
-                <option value="Mini Manuscript Review">Mini Manuscript Review</option>
-                <option value="Mentoring & Coaching Sessions">Mentoring & Coaching Sessions</option>
-                <option value="Thesis & Dissertation Defense Preparation Coaching">Thesis & Dissertation Defense Preparation Coaching</option>
-                <option value="Defense Prep Package">Defense Prep Package</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="additional-support">Additional Support (optional)</label>
-              <select id="additional-support" name="additional_support">
-                <option value="" selected>None</option>
-                <option value="Formatting & APA Final Polish">Formatting & APA Final Polish</option>
-                <option value="References & Citations Verification">References & Citations Verification</option>
-                <option value="Full Dissertation and Thesis Coaching Edit">Full Dissertation and Thesis Coaching Edit</option>
-                <option value="Chapter Rescue Edit">Chapter Rescue Edit</option>
-                <option value="Mini Manuscript Review">Mini Manuscript Review</option>
-                <option value="Mentoring & Coaching Sessions">Mentoring & Coaching Sessions</option>
-                <option value="Thesis & Dissertation Defense Preparation Coaching">Thesis & Dissertation Defense Preparation Coaching</option>
-                <option value="Defense Prep Package">Defense Prep Package</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" required placeholder="Briefly describe what you need, page count, and delivery date"></textarea>
-            </div>
-
-            <button type="submit" class="btn-fill">Book a Consultation</button>
-          </form>
-        </div>
-
       </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="wrap reveal">
+      <h2>Ready to get started?</h2>
+      <p>Send a message with your project details and I'll follow up with a clear scope and estimate.</p>
+      <a href="contact.html" class="btn-fill">Book a Consultation</a>
     </div>
   </section>
 
@@ -850,31 +683,31 @@
       navbar.classList.remove('menu-open');
     }));
 
-    const obs = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
-    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-
-    // Service accordions
     document.querySelectorAll('.service-accordion-btn').forEach(btn => {
       btn.addEventListener('click', () => {
-        const item = btn.parentElement;
-        const wasOpen = item.classList.contains('open');
-        document.querySelectorAll('.service-accordion.open').forEach(i => {
-          i.classList.remove('open');
-          i.querySelector('.service-accordion-btn').setAttribute('aria-expanded', 'false');
-          i.querySelector('.service-accordion-body').style.maxHeight = '0';
+        const accordion = btn.parentElement;
+        const body = accordion.querySelector('.service-accordion-body');
+        const wasOpen = accordion.classList.contains('open');
+
+        document.querySelectorAll('.service-accordion.open').forEach(a => {
+          a.classList.remove('open');
+          a.querySelector('.service-accordion-body').style.maxHeight = null;
+          a.querySelector('.service-accordion-btn').setAttribute('aria-expanded', 'false');
         });
+
         if (!wasOpen) {
-          item.classList.add('open');
-          btn.setAttribute('aria-expanded', 'true');
-          const body = item.querySelector('.service-accordion-body');
+          accordion.classList.add('open');
           body.style.maxHeight = body.scrollHeight + 'px';
+          btn.setAttribute('aria-expanded', 'true');
         }
       });
     });
+
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
   </script>
+
 </body>
 </html>
