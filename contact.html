@@ -410,6 +410,30 @@
     .btn-fill svg { width: 16px; height: 16px; }
 
     /* --- FORM --- */
+    .form-success {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      background: #EBF5EC;
+      border: 1px solid #B7DFB9;
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1.5rem;
+      color: #1B5E20;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .form-success svg {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      margin-top: 2px;
+      color: #2E7D32;
+    }
+    .form-success strong {
+      font-weight: 600;
+    }
+
     .form-group {
       margin-bottom: 1.25rem;
     }
@@ -753,10 +777,17 @@
         <div class="contact-card reveal">
           <div class="contact-card-label">Book a Consultation</div>
 
+          <div id="form-success" class="form-success" style="display:none;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <div>
+              <strong>Thank you!</strong> Your consultation request has been sent. I'll get back to you within 1–2 business days.
+            </div>
+          </div>
+
           <form action="https://formsubmit.co/kageytn@gmail.com" method="POST">
             <input type="hidden" name="_subject" value="New Consultation Request - Dissertation Unstuck">
             <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://www.dissertationunstuck.com/contact.html">
+            <input type="hidden" name="_next" value="https://www.dissertationunstuck.com/contact.html?submitted=true">
 
             <div class="form-group">
               <label for="name">Name (First and Last)</label>
@@ -857,6 +888,14 @@
       });
     }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
     document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+    // Show success message after form submission
+    if (new URLSearchParams(window.location.search).has('submitted')) {
+      const msg = document.getElementById('form-success');
+      msg.style.display = 'flex';
+      msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      history.replaceState(null, '', window.location.pathname);
+    }
 
     // Service accordions
     document.querySelectorAll('.service-accordion-btn').forEach(btn => {
