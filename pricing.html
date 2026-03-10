@@ -140,11 +140,13 @@
 
     /* --- PAGE HEADER --- */
     .page-header {
-      padding: 8.5rem 0 3.5rem;
+      padding: 8.5rem 0 4rem;
       background: linear-gradient(180deg, var(--warm-grad-1) 0%, var(--warm-grad-2) 100%);
+      text-align: center;
     }
     .page-header-inner {
-      max-width: 620px;
+      max-width: 640px;
+      margin: 0 auto;
     }
     .page-header-label {
       font-size: 0.78rem;
@@ -170,131 +172,103 @@
       font-weight: 300;
     }
 
-    /* --- PRICING BODY --- */
-    .pricing-body {
-      padding: 4.5rem 0 5rem;
+    /* --- CATEGORY SECTIONS --- */
+    .pricing-section {
+      padding: 4.5rem 0;
     }
-    .pricing-layout {
-      max-width: 720px;
+    .pricing-section:nth-child(even) {
+      background: linear-gradient(180deg, var(--warm-grad-2) 0%, var(--warm-grad-1) 100%);
     }
-
-    /* --- ACCORDIONS --- */
-    .service-accordions {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
+    .pricing-section-head {
+      margin-bottom: 2.5rem;
     }
-    .service-accordion {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-    .service-accordion:hover {
-      border-color: var(--accent);
-      box-shadow: 0 2px 12px rgba(43, 76, 126, 0.06);
-    }
-    .service-accordion-btn {
-      width: 100%;
-      background: none;
-      border: none;
-      text-align: left;
-      cursor: pointer;
-      padding: 1.25rem 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1.5rem;
-      transition: color 0.2s;
-    }
-    .service-accordion-btn:hover { color: var(--accent); }
-    .service-accordion-title {
+    .pricing-section-head h2 {
       font-family: var(--serif);
-      font-size: 1.15rem;
+      font-size: clamp(1.5rem, 3vw, 2rem);
       font-weight: 400;
       color: var(--dark);
       letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
     }
-    .service-accordion-btn:hover .service-accordion-title { color: var(--accent); }
-    .service-accordion-icon {
-      font-family: var(--serif);
-      font-size: 1.2rem;
-      font-weight: 300;
-      color: var(--text-faint);
-      flex-shrink: 0;
-      transition: transform 0.3s, color 0.2s;
-      line-height: 1;
-    }
-    .service-accordion.open .service-accordion-icon {
-      transform: rotate(45deg);
-      color: var(--accent);
-    }
-    .service-accordion-body {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease;
-    }
-    .service-accordion-inner {
-      padding: 0 1.5rem 1.5rem;
-      font-size: 0.92rem;
-      color: var(--text-secondary);
-      line-height: 1.8;
-      font-weight: 300;
-    }
-    .service-accordion-inner p + p {
-      margin-top: 0.75rem;
-    }
-    .service-accordion-inner ul {
-      list-style: none;
-      margin-top: 0.75rem;
-    }
-    .service-accordion-inner ul li {
-      padding-left: 1.15rem;
-      position: relative;
-      line-height: 1.85;
-    }
-    .service-accordion-inner ul li::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0.65em;
-      width: 5px; height: 5px;
-      border-radius: 50%;
-      background: var(--accent);
-      opacity: 0.35;
-    }
-    .pricing-cards {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      margin-top: 1rem;
-    }
-    .pricing-card {
-      background: var(--bg);
-      border: 1px solid var(--border-light);
-      border-radius: 10px;
-      padding: 1.25rem 1.25rem;
-    }
-    .pricing-card-title {
-      font-family: var(--serif);
-      font-size: 1rem;
-      font-weight: 500;
-      color: var(--dark);
-      margin-bottom: 0.5rem;
-    }
-    .pricing-card p {
-      font-size: 0.88rem;
+    .pricing-section-head p {
+      font-size: 0.95rem;
       color: var(--text-secondary);
       line-height: 1.75;
       font-weight: 300;
+      max-width: 580px;
+    }
+
+    /* --- PRICING CARDS GRID --- */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .pricing-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 2rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+    }
+    .pricing-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 8px 32px rgba(43, 76, 126, 0.08);
+      transform: translateY(-2px);
+    }
+    .pricing-card-price {
+      font-family: var(--serif);
+      font-size: 1.75rem;
+      font-weight: 500;
+      color: var(--accent);
+      margin-bottom: 0.25rem;
+      letter-spacing: -0.02em;
+    }
+    .pricing-card-turnaround {
+      font-size: 0.78rem;
+      color: var(--text-faint);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 1.25rem;
+    }
+    .pricing-card-title {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--dark);
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.01em;
+    }
+    .pricing-card-desc {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      font-weight: 300;
+      margin-bottom: 1rem;
+    }
+    .pricing-card-divider {
+      height: 1px;
+      background: var(--border-light);
+      margin-bottom: 1rem;
+    }
+    .pricing-card-includes {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--dark);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.6rem;
     }
     .pricing-card ul {
       list-style: none;
-      margin: 0.5rem 0;
+      margin: 0;
+      flex-grow: 1;
     }
     .pricing-card ul li {
-      padding-left: 1.15rem;
+      padding-left: 1.25rem;
       position: relative;
       font-size: 0.88rem;
       color: var(--text-secondary);
@@ -305,23 +279,37 @@
       content: '';
       position: absolute;
       left: 0;
-      top: 0.65em;
-      width: 5px; height: 5px;
+      top: 0.6em;
+      width: 6px; height: 6px;
       border-radius: 50%;
       background: var(--accent);
-      opacity: 0.35;
+      opacity: 0.4;
     }
-    .pricing-card-meta {
-      display: flex;
-      gap: 1.5rem;
-      margin-top: 0.75rem;
-      padding-top: 0.75rem;
-      border-top: 1px solid var(--border-light);
-    }
-    .pricing-card-meta span {
+    .pricing-card-badge {
+      display: inline-block;
+      margin-top: 1rem;
       font-size: 0.82rem;
-      font-weight: 500;
-      color: var(--dark);
+      color: var(--accent);
+      font-weight: 600;
+      background: var(--accent-wash-2);
+      padding: 0.4rem 0.85rem;
+      border-radius: 6px;
+    }
+
+    /* --- NOTE --- */
+    .pricing-note {
+      margin-top: 1.5rem;
+      padding: 1.25rem 1.5rem;
+      background: var(--accent-wash-2);
+      border-radius: 10px;
+      border-left: 3px solid var(--accent);
+    }
+    .pricing-note p {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      font-weight: 300;
+      font-style: italic;
     }
 
     /* --- CTA BAND --- */
@@ -365,7 +353,6 @@
       transform: translateY(-1px);
       box-shadow: 0 4px 16px rgba(43, 76, 126, 0.2);
     }
-    .btn-fill svg { width: 16px; height: 16px; }
 
     /* --- FOOTER --- */
     footer {
@@ -398,13 +385,10 @@
     @media (max-width: 640px) {
       .page-header { padding: 7rem 0 2.5rem; }
       .page-header h1 { font-size: 1.85rem; }
-      .pricing-body { padding: 3rem 0 3.5rem; }
-      .service-accordion-btn { padding: 1.1rem 1.15rem; gap: 1rem; }
-      .service-accordion-inner { padding: 0 1.15rem 1.25rem; }
-      .service-accordion-title { font-size: 1.05rem; }
-      .pricing-card { padding: 1rem; }
-      .pricing-card-title { font-size: 0.92rem; }
-      .pricing-card-meta { gap: 1rem; flex-wrap: wrap; }
+      .pricing-section { padding: 3rem 0; }
+      .pricing-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+      .pricing-card { padding: 1.5rem 1.25rem; }
+      .pricing-card-price { font-size: 1.5rem; }
       .cta-band { padding: 3.5rem 0; }
       .nav-links { display: none; }
       .nav-links.open {
@@ -459,186 +443,159 @@
     </div>
   </header>
 
-  <!-- PRICING BODY -->
-  <section class="pricing-body">
+  <!-- DISSERTATION & THESIS EDITING -->
+  <section class="pricing-section">
     <div class="wrap">
-      <div class="pricing-layout">
-        <div class="service-accordions reveal">
-          <div class="service-accordion">
-            <button class="service-accordion-btn" aria-expanded="false">
-              <span class="service-accordion-title">Dissertation &amp; Thesis Editing</span>
-              <span class="service-accordion-icon">+</span>
-            </button>
-            <div class="service-accordion-body">
-              <div class="service-accordion-inner">
-                <p>This service is for graduate and doctoral students who need revision support at the later stages of the writing process.</p>
-                <ul>
-                  <li>You have a complete or near-complete draft that needs editing</li>
-                  <li>You need focused help on specific chapters or sections</li>
-                  <li>You need APA or MLA formatting and reference support</li>
-                </ul>
-                <p>Professional dissertation editing aligned with institutional and style-guide requirements.</p>
+      <div class="pricing-section-head reveal">
+        <h2>Dissertation &amp; Thesis Editing</h2>
+        <p>For graduate and doctoral students who need revision support at the later stages of the writing process. Professional editing aligned with institutional and style-guide requirements.</p>
+      </div>
+      <div class="pricing-grid reveal">
+        <div class="pricing-card">
+          <div class="pricing-card-price">$1,000</div>
+          <div class="pricing-card-turnaround">Turnaround: 2-3 weeks</div>
+          <div class="pricing-card-title">Full Dissertation and Thesis Coaching Edit</div>
+          <div class="pricing-card-desc">Comprehensive manuscript review for dissertations up to 200 pages.</div>
+          <div class="pricing-card-divider"></div>
+          <div class="pricing-card-includes">Includes</div>
+          <ul>
+            <li>Line-by-line editing and flow refinement</li>
+            <li>Structural review across chapters</li>
+            <li>Alignment check between problem, research questions, and findings</li>
+            <li>APA 7 formatting review (headings, spacing, margins, citations)</li>
+            <li>Written feedback summary</li>
+          </ul>
+        </div>
 
-                <div class="pricing-cards">
-                  <div class="pricing-card">
-                    <div class="pricing-card-title">Full Dissertation and Thesis Coaching Edit</div>
-                    <p>Comprehensive manuscript review for dissertations up to 200 pages.</p>
-                    <p style="margin-top: 0.4rem; font-weight: 500; color: var(--dark);">Includes:</p>
-                    <ul>
-                      <li>Line-by-line editing and flow refinement</li>
-                      <li>Structural review across chapters</li>
-                      <li>Alignment check between problem, research questions, and findings</li>
-                      <li>APA 7 formatting review (headings, spacing, margins, citations)</li>
-                      <li>Written feedback summary</li>
-                    </ul>
-                    <div class="pricing-card-meta">
-                      <span>$1,000</span>
-                      <span>Turnaround: 2–3 weeks</span>
-                    </div>
-                  </div>
+        <div class="pricing-card">
+          <div class="pricing-card-price">$175</div>
+          <div class="pricing-card-turnaround">Turnaround: 1-2 weeks</div>
+          <div class="pricing-card-title">Chapter Rescue Edit</div>
+          <div class="pricing-card-desc">Focused editing for individual chapters (up to 30 pages each).</div>
+          <div class="pricing-card-divider"></div>
+          <div class="pricing-card-includes">Includes</div>
+          <ul>
+            <li>Clarity editing</li>
+            <li>Structural revision guidance</li>
+            <li>APA formatting review within chapter</li>
+            <li>Embedded recommendations for revision</li>
+          </ul>
+        </div>
 
-                  <div class="pricing-card">
-                    <div class="pricing-card-title">Chapter Rescue Edit</div>
-                    <p>Focused editing for individual chapters (up to 30 pages each).</p>
-                    <p style="margin-top: 0.4rem; font-weight: 500; color: var(--dark);">Includes:</p>
-                    <ul>
-                      <li>Clarity editing</li>
-                      <li>Structural revision guidance</li>
-                      <li>APA formatting review within chapter</li>
-                      <li>Embedded recommendations for revision</li>
-                    </ul>
-                    <div class="pricing-card-meta">
-                      <span>$175</span>
-                      <span>Turnaround: 1–2 weeks</span>
-                    </div>
-                  </div>
+        <div class="pricing-card">
+          <div class="pricing-card-price">$275</div>
+          <div class="pricing-card-turnaround">Turnaround: 1-2 weeks</div>
+          <div class="pricing-card-title">Mini Manuscript Review</div>
+          <div class="pricing-card-desc">Up to 35 pages with written feedback and sample line edits.</div>
+          <div class="pricing-card-divider"></div>
+          <div class="pricing-card-includes">Best for</div>
+          <ul>
+            <li>Early-stage drafts</li>
+            <li>Proposal reviews</li>
+            <li>Targeted guidance before full editing support</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-                  <div class="pricing-card">
-                    <div class="pricing-card-title">Mini Manuscript Review</div>
-                    <p>Up to 35 pages with written feedback and sample line edits.</p>
-                    <p style="margin-top: 0.4rem; font-weight: 500; color: var(--dark);">Best for:</p>
-                    <ul>
-                      <li>Early-stage drafts</li>
-                      <li>Proposal reviews</li>
-                      <li>Targeted guidance before full editing support</li>
-                    </ul>
-                    <div class="pricing-card-meta">
-                      <span>$275</span>
-                      <span>Turnaround: 1–2 weeks</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+  <!-- REFERENCES & FORMATTING -->
+  <section class="pricing-section">
+    <div class="wrap">
+      <div class="pricing-section-head reveal">
+        <h2>References &amp; Formatting</h2>
+        <p>For students who need citation verification, reference list corrections, and consistent APA or MLA formatting throughout their document.</p>
+      </div>
+      <div class="pricing-grid reveal">
+        <div class="pricing-card">
+          <div class="pricing-card-price">$300</div>
+          <div class="pricing-card-turnaround">Turnaround: 1-2 weeks</div>
+          <div class="pricing-card-title">Formatting &amp; APA Final Polish</div>
+          <div class="pricing-card-desc">Complete document formatting to meet style-guide standards.</div>
+          <div class="pricing-card-divider"></div>
+          <div class="pricing-card-includes">Includes</div>
+          <ul>
+            <li>APA/MLA headings audit</li>
+            <li>Table of contents and pagination review</li>
+            <li>Tables and figures formatting</li>
+            <li>Font, margin, and spacing checks</li>
+          </ul>
+        </div>
 
-          <div class="service-accordion">
-            <button class="service-accordion-btn" aria-expanded="false">
-              <span class="service-accordion-title">References &amp; Formatting</span>
-              <span class="service-accordion-icon">+</span>
-            </button>
-            <div class="service-accordion-body">
-              <div class="service-accordion-inner">
-                <p>This service is for students who need assistance with:</p>
-                <ul>
-                  <li>Review and correction of reference list entries</li>
-                  <li>Verification of in-text citations against the reference list</li>
-                  <li>APA or MLA formatting applied consistently</li>
-                  <li>Identification of missing, incomplete, or inconsistent citations</li>
-                </ul>
-                <p><em>Note: This service does not find missed references or substantial editing of completed work.</em></p>
+        <div class="pricing-card">
+          <div class="pricing-card-price">$250</div>
+          <div class="pricing-card-turnaround">Turnaround: 1-2 weeks</div>
+          <div class="pricing-card-title">References &amp; Citations Verification</div>
+          <div class="pricing-card-desc">Thorough cross-check of all citations and reference entries.</div>
+          <div class="pricing-card-divider"></div>
+          <div class="pricing-card-includes">Includes</div>
+          <ul>
+            <li>Cross-check all in-text citations with reference entries</li>
+            <li>APA formatting corrections</li>
+            <li>DOI and URL verification</li>
+            <li>Identification of missing or mismatched sources</li>
+          </ul>
+        </div>
+      </div>
+      <div class="pricing-note reveal">
+        <p>Note: This service does not find missed references or include substantial editing of completed work.</p>
+      </div>
+    </div>
+  </section>
 
-                <div class="pricing-cards">
-                  <div class="pricing-card">
-                    <div class="pricing-card-title">Formatting &amp; APA Final Polish</div>
-                    <p style="margin-top: 0.4rem; font-weight: 500; color: var(--dark);">Includes:</p>
-                    <ul>
-                      <li>APA/MLA headings audit</li>
-                      <li>Table of contents and pagination review</li>
-                      <li>Tables and figures formatting</li>
-                      <li>Font, margin, and spacing checks</li>
-                    </ul>
-                    <div class="pricing-card-meta">
-                      <span>$300</span>
-                      <span>Turnaround: 1–2 weeks</span>
-                    </div>
-                  </div>
+  <!-- MENTORING & DEFENSE PREP -->
+  <section class="pricing-section">
+    <div class="wrap">
+      <div class="pricing-section-head reveal">
+        <h2>Mentoring &amp; Defense Prep</h2>
+        <p>One-on-one coaching sessions to help you navigate committee feedback, prepare for your defense, and move forward with confidence.</p>
+      </div>
+      <div class="pricing-grid reveal">
+        <div class="pricing-card">
+          <div class="pricing-card-price">$175<span style="font-size: 0.85rem; font-weight: 400; color: var(--text-faint);"> / session</span></div>
+          <div class="pricing-card-turnaround">Flexible scheduling</div>
+          <div class="pricing-card-title">Mentoring &amp; Coaching Sessions</div>
+          <div class="pricing-card-desc">Personalized academic coaching tailored to where you are in the process.</div>
+          <div class="pricing-card-divider"></div>
+          <div class="pricing-card-includes">Use sessions for</div>
+          <ul>
+            <li>Navigating committee feedback</li>
+            <li>Research design clarification</li>
+            <li>Writing strategy &amp; accountability coaching</li>
+            <li>Revision planning</li>
+          </ul>
+          <div class="pricing-card-badge">Mentorship Package: 2 sessions for $225</div>
+        </div>
 
-                  <div class="pricing-card">
-                    <div class="pricing-card-title">References &amp; Citations Verification</div>
-                    <p style="margin-top: 0.4rem; font-weight: 500; color: var(--dark);">Includes:</p>
-                    <ul>
-                      <li>Cross-check all in-text citations with reference entries</li>
-                      <li>APA formatting corrections</li>
-                      <li>DOI and URL verification</li>
-                      <li>Identification of missing or mismatched sources within the existing reference list</li>
-                    </ul>
-                    <div class="pricing-card-meta">
-                      <span>$250</span>
-                      <span>Turnaround: 1–2 weeks</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="pricing-card">
+          <div class="pricing-card-price">$175<span style="font-size: 0.85rem; font-weight: 400; color: var(--text-faint);"> / session</span></div>
+          <div class="pricing-card-turnaround">Flexible scheduling</div>
+          <div class="pricing-card-title">Defense Preparation Coaching</div>
+          <div class="pricing-card-desc">Targeted preparation for proposal or final dissertation defense.</div>
+          <div class="pricing-card-divider"></div>
+          <div class="pricing-card-includes">Includes</div>
+          <ul>
+            <li>Simulated committee questioning</li>
+            <li>Response strategy development</li>
+            <li>Presentation coaching</li>
+            <li>Slide flow review</li>
+            <li>Confidence building and delivery preparation</li>
+          </ul>
+        </div>
 
-          <div class="service-accordion">
-            <button class="service-accordion-btn" aria-expanded="false">
-              <span class="service-accordion-title">Mentoring &amp; Defense Prep</span>
-              <span class="service-accordion-icon">+</span>
-            </button>
-            <div class="service-accordion-body">
-              <div class="service-accordion-inner">
-                <div class="pricing-cards">
-                  <div class="pricing-card">
-                    <div class="pricing-card-title">Mentoring &amp; Coaching Sessions</div>
-                    <p style="margin-top: 0.4rem; font-weight: 500; color: var(--dark);">Use sessions for:</p>
-                    <ul>
-                      <li>Navigating committee feedback</li>
-                      <li>Research design clarification</li>
-                      <li>Writing strategy &amp; accountability coaching</li>
-                      <li>Revision planning</li>
-                    </ul>
-                    <div class="pricing-card-meta">
-                      <span>$175 per session</span>
-                    </div>
-                    <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--accent); font-weight: 500;">Mentorship Package: 2 sessions for $225</p>
-                  </div>
-
-                  <div class="pricing-card">
-                    <div class="pricing-card-title">Thesis &amp; Dissertation Defense Preparation Coaching</div>
-                    <p style="margin-top: 0.4rem; font-weight: 500; color: var(--dark);">Includes:</p>
-                    <ul>
-                      <li>Simulated committee questioning</li>
-                      <li>Response strategy development</li>
-                      <li>Presentation coaching</li>
-                      <li>Slide flow review</li>
-                      <li>Confidence building and delivery preparation</li>
-                    </ul>
-                    <div class="pricing-card-meta">
-                      <span>$175 per session</span>
-                    </div>
-                  </div>
-
-                  <div class="pricing-card">
-                    <div class="pricing-card-title">Defense Prep Package</div>
-                    <p>One-on-one sessions focused on navigating the revision and decision-making process.</p>
-                    <p style="margin-top: 0.4rem; font-weight: 500; color: var(--dark);">Includes:</p>
-                    <ul>
-                      <li>3 mock defense coaching sessions</li>
-                      <li>Written defense question/response strategy guide</li>
-                      <li>Slide flow feedback &amp; coaching</li>
-                      <li>Final confidence prep session</li>
-                    </ul>
-                    <div class="pricing-card-meta">
-                      <span>$750</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="pricing-card">
+          <div class="pricing-card-price">$750</div>
+          <div class="pricing-card-turnaround">Comprehensive package</div>
+          <div class="pricing-card-title">Defense Prep Package</div>
+          <div class="pricing-card-desc">Everything you need to walk into your defense fully prepared.</div>
+          <div class="pricing-card-divider"></div>
+          <div class="pricing-card-includes">Includes</div>
+          <ul>
+            <li>3 mock defense coaching sessions</li>
+            <li>Written defense question/response strategy guide</li>
+            <li>Slide flow feedback &amp; coaching</li>
+            <li>Final confidence prep session</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -683,26 +640,6 @@
       navLinks.classList.remove('open');
       navbar.classList.remove('menu-open');
     }));
-
-    document.querySelectorAll('.service-accordion-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const accordion = btn.parentElement;
-        const body = accordion.querySelector('.service-accordion-body');
-        const wasOpen = accordion.classList.contains('open');
-
-        document.querySelectorAll('.service-accordion.open').forEach(a => {
-          a.classList.remove('open');
-          a.querySelector('.service-accordion-body').style.maxHeight = null;
-          a.querySelector('.service-accordion-btn').setAttribute('aria-expanded', 'false');
-        });
-
-        if (!wasOpen) {
-          accordion.classList.add('open');
-          body.style.maxHeight = body.scrollHeight + 'px';
-          btn.setAttribute('aria-expanded', 'true');
-        }
-      });
-    });
 
     const obs = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
